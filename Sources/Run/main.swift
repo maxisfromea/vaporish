@@ -18,6 +18,7 @@ import App
 /// if no command is given, it will default to "serve"
 let config = try Config()
 try config.setup()
+config.preparations.append(Home.self)
 
 let drop = try Droplet(config)
 try drop.setup()
